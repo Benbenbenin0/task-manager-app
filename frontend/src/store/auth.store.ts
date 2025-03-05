@@ -1,3 +1,5 @@
+"use client";
+
 import { create } from 'zustand';
 import { User } from '@/types';
 import * as authService from '@/services/auth.service';

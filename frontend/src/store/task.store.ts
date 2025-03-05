@@ -1,3 +1,5 @@
+"use client";
+
 import { create } from 'zustand';
 import { Task, TaskFormData, TaskStatus } from '@/types';
 import * as taskService from '@/services/task.service';

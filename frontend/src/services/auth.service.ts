@@ -1,3 +1,5 @@
+"use client";
+
 import { ApiResponse, AuthUser, LoginCredentials, RegisterCredentials, User } from '@/types';
 import { apiRequest } from './api';
 

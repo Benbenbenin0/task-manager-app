@@ -1,3 +1,5 @@
+"use client";
+
 import { ApiResponse, Task, TaskFormData, TaskStatus } from '@/types';
 import { apiRequest } from './api';
 

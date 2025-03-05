@@ -9,12 +9,23 @@ When you see the error `P1001: Can't reach database server at localhost:5432`, i
 # Install PostgreSQL
 brew install postgresql@15
 
-# Start PostgreSQL service
+# Start PostgreSQL service (Method 1 - using brew services)
 brew services start postgresql@15
+
+# If you encounter the error "Could not enable service: 125: Domain does not support specified action",
+# try one of these alternative methods:
+
+# Method 2 - Start PostgreSQL manually
+pg_ctl -D /opt/homebrew/var/postgresql@15 start
+
+# Method 3 - Start PostgreSQL manually (alternative path)
+pg_ctl -D $(brew --prefix)/var/postgresql@15 start
 
 # Create database
 createdb taskmanager
 ```
+
+If you continue to have issues with PostgreSQL on macOS, consider using one of the other options below (Docker or SQLite).
 
 ### Windows
 1. Download and install PostgreSQL from [postgresql.org](https://www.postgresql.org/download/windows/)
